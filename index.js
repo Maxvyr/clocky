@@ -3,19 +3,13 @@ const hourShow = document.querySelector('.dig');
 const setDate = () => {
   const now = new Date();
 
-  let seconds = now.getSeconds();
-  const secondsDegrees = ((seconds / 60) * 360) + 90;
+  let seconds = now.getSeconds() < 10 ? `0${now.getSeconds()}` : now.getSeconds();
   
-  const mins = now.getMinutes();
-  const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 90;
+  const mins = now.getMinutes() < 10 ? `0${now.getMinutes()}` : now.getMinutes();
   
-  const hour = now.getHours();
-  const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90;
-  if(seconds < 10){
-    hourShow.innerHTML = `${hour} : ${mins} : 0${seconds}`;
-  } else {
-    hourShow.innerHTML = `${hour} : ${mins} : ${seconds}`;
-  }
+  const hour = now.getHours() < 10 ? `0${now.getHours()}` : now.getHours();
+
+  hourShow.textContent = `${hour} : ${mins} : ${seconds}`;
 }
 
 setInterval(setDate, 1000);
