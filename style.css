@@ -16,6 +16,15 @@
   background-size: cover;
 }
 
+.days {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  z-index: 5;
+}
+
 .clock {
   width: 15rem;
   height: 15rem;
@@ -36,11 +45,14 @@
 }
 
 .dig {
-  color: rgb(255 253 253);
-  text-shadow: 2px 2px 4px #000000;
   position: absolute;
   top: 50%;
   left: 50%;
   display: inline-flex;
   transform: translate(-50%, -50%);
+}
+
+.color-text {
+  color: rgb(255 253 253);
+  text-shadow: 2px 2px 4px #000000;
 }
