@@ -35,7 +35,7 @@
   transform: translate(-50%, -50%);
   z-index: 2;
   padding: 3rem;
-  border: 20px solid rgb(255, 255, 255);
+  border: 20px solid;
   box-shadow:
     0 0 0 4px rgba(0,0,0,0.1),
     inset 0 0 0 3px #EFEFEF,
@@ -51,7 +51,12 @@
   transform: translate(-50%, -50%);
 }
 
-.color-text {
-  color: rgb(255 253 253);
-  text-shadow: 2px 2px 4px #000000;
+.color-text-day {
+  color : #ffffff;
+  text-shadow : 2px 2px 4px #000000;
+}
+
+.color-text-night {
+  color : #000000;
+  text-shadow : 2px 2px 4px #ffffff;
 }
