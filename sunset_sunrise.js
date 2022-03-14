@@ -1,6 +1,6 @@
 const clock = document.querySelector(".clock")
 const hText = document.querySelectorAll(".h-text")
-
+let test = false
 
 const fetchSunriseSunset = async () => {
     return await fetch('https://api.sunrise-sunset.org/json?lat=45.750660&lng=3.111450&date=today')
@@ -50,7 +50,7 @@ const colorClock = async () => {
             element.classList.remove("color-text-night")
         })
     } else {
-        colorText.style.color = "black"
+        clock.style.borderColor = "black"
         hText.forEach((element, index, obj) => {
             element.classList.add("color-text-night")
             element.classList.remove("color-text-day")
