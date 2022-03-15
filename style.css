@@ -24,7 +24,7 @@
   font-size: 1.5rem;
 }
 
-.clock {
+.clock-day {
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
@@ -35,12 +35,32 @@
   transform: translate(-50%, -50%);
   z-index: 2;
   padding: 3rem;
-  border: 20px solid;
+  border: 20px solid rgb(255, 255, 255);
   box-shadow:
     0 0 0 4px rgba(0,0,0,0.1),
     inset 0 0 0 3px #EFEFEF,
     inset 0 0 10px black,
     0 0 10px rgba(0,0,0,0.5);
+}
+
+
+.clock-night {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 3rem;
+  border: 20px solid rgb(0, 0, 0);
+  box-shadow:
+    0 0 0 4px rgba(0,0,0,0.1),
+    inset 0 0 0 3px #505050,
+    inset 0 0 20px rgb(255, 255, 255),
+    0 0 50px rgba(255, 255, 255, 0.5);
 }
 
 .dig {
