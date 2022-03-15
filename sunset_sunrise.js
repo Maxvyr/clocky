@@ -44,13 +44,15 @@ const colorClock = async () => {
     const now = new Date()
     const daySunriseAndSunset = await parseDate()
     if (now > daySunriseAndSunset.dateSunrise && now < daySunriseAndSunset.dateSunset){
-        clock.style.borderColor = "rgb(255, 255, 255)"
+        clock.classList.add("clock-day")
+        clock.classList.remove("clock-night")
         hText.forEach((element, index, obj) => {
             element.classList.add("color-text-day")
             element.classList.remove("color-text-night")
         })
     } else {
-        clock.style.borderColor = "black"
+        clock.classList.add("clock-night")
+        clock.classList.remove("clock-day")
         hText.forEach((element, index, obj) => {
             element.classList.add("color-text-night")
             element.classList.remove("color-text-day")
